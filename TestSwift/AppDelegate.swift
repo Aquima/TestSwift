@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  TestSwift
 //
-//  Created by Nicolas Miranda on 3/12/15.
-//  Copyright © 2015 RaulQuispe. All rights reserved.
+//  Created by Raul Quispe on 3/12/15.
+//  Copyright © 2015 Quimadevelopers. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let nav: UINavigationController = UINavigationController()
+        nav.navigationBarHidden = true
+        let logInVC: LogInViewController = LogInViewController()
+        nav.viewControllers = [logInVC]
+        self.window?.rootViewController = nav
+        
+        self.window?.makeKeyAndVisible()
+
         return true
     }
 
