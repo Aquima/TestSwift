@@ -14,6 +14,10 @@
 		3724A7051C11286300E84EA3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724A7041C11286300E84EA3 /* LogInViewController.swift */; };
 		3724A7081C11291200E84EA3 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724A7071C11291200E84EA3 /* ListViewController.swift */; };
 		3724A70A1C112E4600E84EA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3724A7091C112E4600E84EA3 /* Main.storyboard */; };
+		3724A7101C11510D00E84EA3 /* CustomOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724A70E1C11510D00E84EA3 /* CustomOneCell.swift */; };
+		3724A7111C11510D00E84EA3 /* CustomOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3724A70F1C11510D00E84EA3 /* CustomOneCell.xib */; };
+		3724A7141C115FE100E84EA3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724A7131C115FE100E84EA3 /* DetailViewController.swift */; };
+		3724A7161C1160C500E84EA3 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724A7151C1160C500E84EA3 /* UserEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		3724A7041C11286300E84EA3 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		3724A7071C11291200E84EA3 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		3724A7091C112E4600E84EA3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3724A70E1C11510D00E84EA3 /* CustomOneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOneCell.swift; sourceTree = "<group>"; };
+		3724A70F1C11510D00E84EA3 /* CustomOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOneCell.xib; sourceTree = "<group>"; };
+		3724A7131C115FE100E84EA3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3724A7151C1160C500E84EA3 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +82,6 @@
 			children = (
 				3724A6FE1C11283500E84EA3 /* Controllers */,
 				3724A7011C11283500E84EA3 /* Model */,
-				3724A7021C11283500E84EA3 /* View */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -82,6 +89,7 @@
 		3724A6FE1C11283500E84EA3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3724A7121C115FCD00E84EA3 /* DetailViewController */,
 				3724A7061C11290400E84EA3 /* ListViewController */,
 				3724A6FF1C11283500E84EA3 /* LogInViewController */,
 			);
@@ -99,23 +107,35 @@
 		3724A7011C11283500E84EA3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3724A7151C1160C500E84EA3 /* UserEntity.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		3724A7021C11283500E84EA3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		3724A7061C11290400E84EA3 /* ListViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3724A70B1C114ACF00E84EA3 /* Views */,
 				3724A7071C11291200E84EA3 /* ListViewController.swift */,
 			);
 			path = ListViewController;
+			sourceTree = "<group>";
+		};
+		3724A70B1C114ACF00E84EA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3724A70E1C11510D00E84EA3 /* CustomOneCell.swift */,
+				3724A70F1C11510D00E84EA3 /* CustomOneCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3724A7121C115FCD00E84EA3 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3724A7131C115FE100E84EA3 /* DetailViewController.swift */,
+			);
+			path = DetailViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +200,7 @@
 				3724A70A1C112E4600E84EA3 /* Main.storyboard in Resources */,
 				3724A6F01C1117BA00E84EA3 /* LaunchScreen.storyboard in Resources */,
 				3724A6ED1C1117BA00E84EA3 /* Assets.xcassets in Resources */,
+				3724A7111C11510D00E84EA3 /* CustomOneCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +214,9 @@
 				3724A6E81C1117BA00E84EA3 /* ViewController.swift in Sources */,
 				3724A6E61C1117BA00E84EA3 /* AppDelegate.swift in Sources */,
 				3724A7081C11291200E84EA3 /* ListViewController.swift in Sources */,
+				3724A7141C115FE100E84EA3 /* DetailViewController.swift in Sources */,
+				3724A7161C1160C500E84EA3 /* UserEntity.swift in Sources */,
+				3724A7101C11510D00E84EA3 /* CustomOneCell.swift in Sources */,
 				3724A7051C11286300E84EA3 /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

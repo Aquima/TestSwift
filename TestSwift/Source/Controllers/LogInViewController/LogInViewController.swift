@@ -7,13 +7,14 @@
 //
 
 import UIKit
-public var sizeView: CGSize = CGSize(width: 0, height: 0)
 
 class LogInViewController: UIViewController,UITextFieldDelegate {
     var scrollView: UIScrollView!
     var usernameTextField:UITextField!
     var passwordTextField:UITextField!
     var btnLogIn:UIButton!
+    var sizeView: CGSize = CGSize(width: 0, height: 0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,7 +69,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
 
         scrollView.addSubview(btnLogIn)
         
-        //this is for enbled = true
+        //this is for enbled = false
         let rect = CGRectMake(0, 0, btnLogIn.frame.width, btnLogIn.frame.height)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
@@ -89,10 +90,9 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK - Actions
+    // MARK: - Actions
     func logInAction(sender:UIButton!)
     {
-        print("Button Log In")
         self.usernameTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
         self.scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
@@ -100,7 +100,6 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         self.navigationController?.pushViewController(listVC, animated: true)
     }
     func textFieldDidChange(textField: UITextField) {
-        //your code
         if self.usernameTextField.text?.isEmpty == false && self.passwordTextField.text?.isEmpty == false{
             btnLogIn.enabled = true
         }else{
@@ -109,7 +108,6 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     }
     // MARK:- Textfield Delegates
     func textFieldDidBeginEditing(textField: UITextField) {
-        print("TextField did begin editing method called")
         if(textField==self.usernameTextField){
             self.scrollView.setContentOffset(CGPointMake(0, 120), animated: true)
         }
@@ -120,7 +118,6 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        print("TextField should return method called")
         if(textField==self.usernameTextField){
             self.usernameTextField.resignFirstResponder()
             self.passwordTextField.becomeFirstResponder()
